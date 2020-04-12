@@ -6,9 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loop 1 - Step 2</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  
+    <div class="container wrap">
+        <div class="dot">
+            <i class="fas fa-circle active"></i>
+            <i class="fas fa-circle inactive"></i>
+            <i class="fas fa-circle inactive"></i>
+        </div>
+        <div class="title">payment method</div>
+        <div class="row method">
+            <div class="col-sm-2">
+                <img src="img/visa.svg" alt="">
+            </div>
+            <div class="col-sm-7 text-inactive">VISA</div>
+        </div>
+        <div class="row method">
+            <div class="col-sm-2">
+                <img src="img/mastercard.svg" alt="">
+            </div>
+            <div class="col-sm-7 text-active">MASTERCARD</div>
+            <div class="col-sm-2 check"><img src="img/check.svg" alt=""></div>
+        </div>
+        <div class="row method">
+            <div class="col-sm-2">
+                <img src="img/maestro.svg" alt="">
+            </div>
+            <div class="col-sm-7 text-inactive">MAESTRO</div>
+        </div>
+        <div class="button">
+            next step
+            <img src="img/arrow.svg" alt="">
+        </div>
+    </div>
 </body>
 </html>

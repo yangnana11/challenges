@@ -1,0 +1,78 @@
+body {
+    background-image: url(../img/background.jpg);
+}
+
+.wrap {
+    position: absolute;
+    top: 50%;
+    -ms-transform:  translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    background-color: white;
+    border-radius: 5px;
+    width: 340px;
+    padding: 0;
+}
+.active {
+    color: #AAAAAA;
+}
+.inactive {
+    color: #DEDEDE;
+}
+.dot {
+    text-align: center;
+    padding: 10px;
+}
+i {
+    margin: 0 5px;
+    font-size: 10px;
+}
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.method {
+    border-bottom: 1px solid #E6E6E6;
+    padding: 15px 10px;
+    margin: 0;
+    font-size: 13px;
+}
+.method:hover {
+    background-color: #F7F7F7;
+    cursor: pointer;
+}
+.method div:nth-child(2) {
+    margin-left: 10px;
+    margin-top: 3px;
+}
+img {
+    width: 40px;
+}
+.text-inactive {
+    color: #A5A8AB;
+}
+.text-active {
+    color: black;
+}
+.check {
+    text-align: right;
+    padding: 0;
+}
+.check img {
+    width: 15px;
+}
+.button {
+    background-color: #5584E0;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.button img {
+    width: 15px;
+    margin-top: -5px;
+}
