@@ -1,1 +1,1 @@
-Visual demo: https://yangnana11.github.io/challenges/frontloops/markup/loop1/index.html
+Visual demo: https://yangnana11.github.io/challenges/frontloops/markup/loop2/index.html
