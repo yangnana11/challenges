@@ -1,0 +1,20 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+table {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+th, td {
+    padding: 5px;
+    border-bottom: 1px solid #F0F2F7;
+}
+th {
+    color: #6E778C;
+    text-align: left;
+}
+td {
+    font-size: 12px;
+    color: #364054;
+}
