@@ -25,3 +25,5 @@ A balance for a currency is calculated by adding all the “credits” and subtr
 Net worth = CAD_balance + (BTC_balance * BTC_CAD_rate) + (ETH_balance * ETH_CAD_rate)
 
 with BTC_CAD_rate = 9432.24 and ETH_CAD_rate = 216.12
+
+Virtual demo: https://yangnana11.github.io/challenges/interview/shakepay/index.html
