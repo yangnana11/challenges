@@ -60,13 +60,13 @@ $(document).ready(function(){
                   case 'ETH': eth_bal+=item.to.amount; break;
                   case 'CAD': cad_bal+=item.to.amount; break;
               }
-            } else if (item.direction == 'debit') {
+            } else if (item.direction == 'credit') {
                 switch(item.currency) {
                     case 'BTC': btc_bal+=item.amount; break;
                     case 'ETH': eth_bal+=item.amount; break;
                     case 'CAD': cad_bal+=item.amount; break;
                 }
-            } else if (item.direction == 'credit') {
+            } else if (item.direction == 'debit') {
                 switch(item.currency) {
                     case 'BTC': btc_bal-=item.amount; break;
                     case 'ETH': eth_bal-=item.amount; break;
