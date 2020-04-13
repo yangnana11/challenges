@@ -16,6 +16,7 @@ For example,
         "amount": 0.00084429
     }
 }
+
 BTC_balance += 0.00084429
 
 
