@@ -44,5 +44,23 @@ const exerciseMinsExample = {
     'Mike': [60, 80, 25, 45, 10, 60, 30],
 
     'Chris': [0, 15, 45, 20, 90, 15, 0]
-    
+
 };
+
+------------------------
+Instructions from your teacher:
+Since everyone is making baking at home, you decide to treat yourself! You check if you have certain ingredients to make some cinnamon rolls from the recipe video you saw online. 
+
+Write a function that takes in an ingredient you're looking for, and an object of key/value 
+pairs where the location is the key and the ingredient (that you actually do have in that location) is the value. 
+If the inputted ingredient is found, the function should return "You found {ingredient} in the the {location}" 
+If the inputted ingredient isn't found, return "oof, you ran out :(" 
+
+ex: 
+const specificIngredient = { 'closet' : 'flour' } 
+
+console.log(bakingIngredients(specificIngredient, 'flour')) 
+--> "You found flour in the closet" 
+
+console.log(bakingIngredients(specificIngredient, 'vanilla extract')) --> 
+"oof, you ran out :("
