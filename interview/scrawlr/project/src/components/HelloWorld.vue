@@ -1,19 +1,22 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <button @click="count++">count is: {{ count }}</button>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+  Clicked: {{ $store.state.count }} times, count is {{ evenOrOdd }}.
+  <button @click="increment">+</button>
+  <button @click="decrement">-</button>
+  <button @click="incrementIfOdd">Increment if odd</button>
+  <button @click="incrementAsync">Increment async</button>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      count: 0
-    }
-  }
+  computed: mapGetters([
+    'evenOrOdd'
+  ]),
+  methods: mapActions([
+    'increment',
+    'decrement',
+    'incrementIfOdd',
+    'incrementAsync'
+  ])
 }
 </script>
