@@ -1,23 +1,17 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <!-- <UpVote msg="Hello Vue 3.0 + Vite" /> -->
-  <component
-     v-for="(item,index) in children1"
-     :is="item"
-     :key="index"
-    ></component>
+    <div v-for="(item, index) in children1" :key="index">
+      <UpVote :ref="'element'+index" @click.prevent="test()"/>
+    </div>
     <button @click="addComponent1()">Add</button>
-    <component
-     v-for="(item,index) in children2"
-     :is="item"
-     :key="index"
-    ></component>
+    <div v-for="(item, index) in children2" :key="index">
+      <UpVote :ref="'element'+index" @click.prevent="test()"/>
+    </div>
     <button @click="addComponent2()">Add</button>
-    <component
-     v-for="(item,index) in children3"
-     :is="item"
-     :key="index"
-    ></component>
+    <div v-for="(item, index) in children3" :key="index">
+      <UpVote :ref="'element'+index" @click.prevent="test()"/>
+    </div>
     <button @click="addComponent3()">Add</button>
 </template>
 
@@ -45,6 +39,10 @@ export default {
     },
     addComponent3() {
       this.children3.push(UpVote)
+    },
+    test() {
+      console.log("Test");
+      console.log(this.children1);
     }
   }
 }
