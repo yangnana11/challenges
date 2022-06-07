@@ -2,15 +2,15 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <!-- <UpVote msg="Hello Vue 3.0 + Vite" /> -->
     <div v-for="(item, index) in children1" :key="index">
-      <UpVote :ref="'element'+index" @click.prevent="test()"/>
+      <UpVote :ref="'element'+index" @click.prevent="test()" :myid="0"/>
     </div>
     <button @click="addComponent1()">Add</button>
     <div v-for="(item, index) in children2" :key="index">
-      <UpVote :ref="'element'+index" @click.prevent="test()"/>
+      <UpVote :ref="'element'+index" @click.prevent="test()" :myid="1"/>
     </div>
     <button @click="addComponent2()">Add</button>
     <div v-for="(item, index) in children3" :key="index">
-      <UpVote :ref="'element'+index" @click.prevent="test()"/>
+      <UpVote :ref="'element'+index" @click.prevent="test()" :myid="2"/>
     </div>
     <button @click="addComponent3()">Add</button>
 </template>

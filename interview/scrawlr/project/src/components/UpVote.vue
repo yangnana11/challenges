@@ -1,10 +1,11 @@
 <template>
-  <button @click="changeStatus">{{ status }}</button>
+  <button @click="changeStatus(myid)">{{ status[myid] }}</button>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 export default {
+  props: ["myid"],
   computed: mapGetters([
     'status'
   ]),

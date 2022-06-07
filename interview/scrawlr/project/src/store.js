@@ -2,24 +2,28 @@ import { createStore } from 'vuex'
 
 
 const state = {
-  status: "normal"
+  status: {
+    0: "normal",
+    1: "normal",
+    2: "normal"
+  }
 }
 
 const mutations = {
-  select (state) {
-    state.status = "selected";
+  select (state, id) {
+    state.status[id] = "selected";
   },
-  nselect (state) {
-    state.status = "normal";
+  nselect (state, id) {
+    state.status[id] = "normal";
   }
 }
 
 const actions = {
-    changeStatus({commit, state}) {
-      if (state.status=="normal") {
-          commit("select");
+    changeStatus({commit, state}, id) {
+      if (state.status[id]=="normal") {
+          commit("select", id);
       } else {
-          commit("nselect");
+          commit("nselect", id);
       }
   }
 }
