@@ -6,3 +6,39 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+.g-wrap {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: auto 100px;
+  grid-gap: 10px;
+}
+.g-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  border: 1px solid #e3e4e9;
+  width: 100%;
+  min-height: 20px;
+}
+.g-container .item, .g-wrap .add {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;  
+  border-radius: 20px;
+  margin: 5px;
+  width: 50px;
+  height: 40px;
+  border-color: transparent;
+}
+.g-container .item.selected {
+  background-image: url(./assets/arrow-up-selected.svg);
+  background-color: #E5E8FD;
+}
+.g-container .item.normal {
+  background-image: url(./assets/arrow-up-normal.svg);
+  background-color: #F4F6F8;
+}
+.g-wrap .add {
+  background-image: url(./assets/plus.svg);
+  background-color: #f3f5f7;
+}

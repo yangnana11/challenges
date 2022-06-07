@@ -1,5 +1,5 @@
 <template>
-  <button @click="changeStatus(myid)">{{ status[myid] }}</button>
+  <button class="item" :class="status[myid]=='selected'?'selected':'normal'" @click="changeStatus(myid)"></button>
 </template>
 
 <script>

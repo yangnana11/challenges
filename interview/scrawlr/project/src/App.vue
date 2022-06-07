@@ -1,18 +1,29 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <!-- <UpVote msg="Hello Vue 3.0 + Vite" /> -->
-    <div v-for="(item, index) in children1" :key="index">
-      <UpVote :ref="'element'+index" @click.prevent="test()" :myid="0"/>
+    <div class="g-wrap">
+      <div class="g-container">
+        <div v-for="(item, index) in children1" :key="index">
+          <UpVote :ref="'element'+index" @click.prevent="test()" :myid="0"/>
+        </div>
+      </div>      
+      <button @click="addComponent1()" class="add"></button>
     </div>
-    <button @click="addComponent1()">Add</button>
-    <div v-for="(item, index) in children2" :key="index">
-      <UpVote :ref="'element'+index" @click.prevent="test()" :myid="1"/>
+    <div class="g-wrap">
+      <div class="g-container">
+        <div v-for="(item, index) in children2" :key="index">
+          <UpVote :ref="'element'+index" @click.prevent="test()" :myid="1"/>
+        </div>
+      </div>
+      <button @click="addComponent2()" class="add"></button>
     </div>
-    <button @click="addComponent2()">Add</button>
-    <div v-for="(item, index) in children3" :key="index">
-      <UpVote :ref="'element'+index" @click.prevent="test()" :myid="2"/>
+    <div class="g-wrap">
+      <div class="g-container">
+        <div v-for="(item, index) in children3" :key="index">
+          <UpVote :ref="'element'+index" @click.prevent="test()" :myid="2"/>
+        </div>
+      </div>
+      <button @click="addComponent3()" class="add"></button>
     </div>
-    <button @click="addComponent3()">Add</button>
 </template>
 
 <script>
