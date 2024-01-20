@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+    --font-heading1: 50px;
+    --font-heading2: 45px;
+    --font-normal: 16px;
+    --base-margin: 24px;
+    --border-radius-base: 24px;
+    --main-color1: #ff6c2e;
+    --main-color2: #7076cf;
+    --main-color3: #333af1;
+    --main-color4: #e2dcfb;
+    --font-color: #ebedfc;
+    --navigation-color: #c4c4c4;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--font-color);
+}
+* {
+    box-sizing: border-box;
+}
+.body-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url("https://freedesignfile.com/upload/2017/10/Black-white-picture-of-tree-on-calm-lake-Stock-Photo.jpg"), lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    padding: var(--base-margin);
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #000;
+    border-radius: calc(var(--border-radius-base) + var(--base-margin));
+    padding: var(--base-margin);
+    gap: var(--base-margin);
+}
+.navigation-wrap {
+    display: flex;
+    gap: var(--base-margin);
+    color: var(--navigation-color);
+    align-items: center;
+}
+.title {
+    font-size: var(--font-heading1);
+    margin: calc(var(--base-margin) * 3) 0;
+}
+.sub-title {
+    font-size: var(--font-heading2);
+    margin-bottom: var(--base-margin);
+}
+.left input[type=button] {
+    margin-top: calc(var(--base-margin) * 2);
+    padding: var(--font-normal) 0;
+    width: 140px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: var(--font-color);
+}
+.right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: var(--border-radius-base);
+}
+.section {
+    position: relative;
+    height: 402px;
+    max-height: 40vh;
+}
+.section svg {
+    max-width: 100%;
+    max-height: 50%;
+}
+.section[explorer] {
+    background-color: var(--main-color3);
+    border-top-left-radius: var(--border-radius-base);
+}
+.section[stories] {
+    background-color: var(--main-color1);
+    border-top-right-radius: var(--border-radius-base);
+}
+.section[about] {
+    background-color: var(--main-color4);
+    border-bottom-left-radius: var(--border-radius-base);
+    color: var(--main-color3)
+}
+.section[help] {
+    background-color: var(--main-color2);
+    border-bottom-right-radius: var(--border-radius-base);
+}
+.section-title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: var(--base-margin);
+}
+.section[stories] svg, .section[help] svg {
+    margin-left: calc(var(--base-margin) + 10px);
+    margin-top: calc(var(--base-margin) + 10px);
+}
+.left {
+    position: relative;
+}
+.left .left-icon-wrap {
+    position: absolute;
+    right: 0;
+    bottom: var(--base-margin);
+    height: 325px;
+}
+.left-icon-wrap .bg {
+    width: 190px;
+    height: 90px;
+    transform: rotate(-44.674deg);
+    border-radius: 50px;
+    border: 1px solid #FFFDFD;
+    background-image: url("https://www.mountainphotography.com/images/320/20091130-Teton-Moonlight-bw.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.left-icon-wrap svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.section .arrow {
+    position: absolute;
+    right: var(--base-margin);
+    top: var(--base-margin);
+}
+.section .arrow svg {
+    margin: 0;
+}
+@media (min-width: 1381px) and (max-height: 895px) {
+    .left > *:not(.left-icon-wrap) {
+        z-index: 1;
+        position: relative;
+    }
+}
+@media (min-width: 1381px) and (max-height: 530px) {
+    .body-wrap {
+        background: none;
+        color: #000;
+    }
+    .body-wrap > * {
+        display: none;
+    }
+    .body-wrap::after {
+        content: "The height is too small to display. Mininum size is 531px";
+        display: block !important;
+    }
+}
+@media (max-width: 1380px) {
+    html, body {
+        height: unset;
+    }
+    .content {
+        display: block;
+    }
+    .left {
+        margin-bottom: calc(var(--base-margin) * 2);
+    }
+    .left > *:not(.left-icon-wrap) {
+        z-index: 1;
+        position: relative;
+    }
+}
+@media (max-width: 675px) {
+    :root {
+        --font-heading1: 40px;
+        --font-heading2: 35px;
+    }
+    .section {
+        height: 350px;
+        position: relative;
+    }
+    .section svg {
+        max-width: calc(100% - var(--base-margin) - 20px);
+        height: auto;
+    }
+}
+@media (max-width: 575px) {
+    :root {
+        --font-heading1: 35px;
+        --font-heading2: 20px;
+    }
+}
